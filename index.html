@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Web Programming</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="app">
+    <div>
+      <button @click="toggleView">Toggle View</button>
+    </div>
+    <div>
+      <img :src="currentItem.img" alt="Item Image">
+      <h2 v-if="view === 'title'">{{ currentItem.title }}</h2>
+      <p v-if="view === 'def'">{{ currentItem.def }}</p>
+    </div>
+    <div>
+      <button @click="prevItem">Previous</button>
+      <button @click="nextItem">Next</button>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script src="js/data/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
+
+<!--Project made by TB and MB for ILAC classes of Web Advanced Programming-->
